@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import Banner from "./components/Banner";
+import BodySection from "./components/BodySection";
+import "./styles/reset.scss";
+
+export const themeContext = createContext();
+
+const App = () => {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
   );
-}
+  return (
+    <themeContext.Provider value={{ theme, setTheme }}>
+      <Banner setTodos={setTodos} todos={todos} />
+      <BodySection setTodos={setTodos} todos={todos} />
+    </themeContext.Provider>
+  );
+};
 
 export default App;

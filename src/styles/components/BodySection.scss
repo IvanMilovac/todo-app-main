@@ -1,0 +1,149 @@
+@import "../variables";
+@import "../mixins";
+@import "./Banner";
+
+.body-section {
+  display: flex;
+  font-family: $FontFamily;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  padding-bottom: 1rem;
+  .body-section-container {
+    width: 90%;
+    border-radius: 0.5rem;
+    margin-top: -1.7rem;
+    overflow: hidden;
+  }
+  .filter-buttons {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding-block: 1rem;
+    background: white;
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    button {
+      background: transparent;
+      border: 0;
+      font-size: inherit;
+      font-family: inherit;
+      outline: 0;
+    }
+    &.light-theme {
+      background: white;
+      button {
+        color: $DarkGrayishBlue;
+      }
+    }
+    &.dark-theme {
+      background: $VeryDarkDesaturatedBlue;
+      button {
+        color: $DarkGrayishBlue;
+      }
+    }
+    .active {
+      color: $BrightBlue !important;
+    }
+  }
+}
+
+.dark-body-bg {
+  background: $VeryDarkBlue;
+}
+
+.light-body-bg {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 2.2rem;
+  position: relative;
+}
+
+ul li {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 10fr 1fr;
+  grid-template-areas: "checkbox text delete";
+  padding-block: 0.6rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  .checkbox-list-item {
+    grid-area: check;
+  }
+  .todo-text {
+    grid-area: text;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    color: $DarkGrayishBlue;
+  }
+  .todo-delete {
+    grid-area: delete;
+    font-size: 1.5rem;
+    color: $DarkGrayishBlue;
+  }
+}
+
+.line-through {
+  position: relative;
+  opacity: 0.8;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-40%);
+    height: 2px;
+    background: $DarkGrayishBlue;
+    animation: 0.3s line-through forwards;
+  }
+
+  @keyframes line-through {
+    from {
+      right: 100%;
+    }
+    to {
+      right: 0;
+    }
+  }
+}
+
+.items-left-clear-completed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.7rem;
+  span {
+    opacity: 0.95;
+  }
+  button {
+    background: transparent;
+    border: 0;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    outline: 0;
+  }
+  &.dark {
+    background: $VeryDarkDesaturatedBlue;
+    color: $LightGrayishBlue;
+  }
+  &.light {
+    background: white;
+    color: $DarkGrayishBlue;
+  }
+}
+
+.no-items-display-none {
+  display: none;
+}

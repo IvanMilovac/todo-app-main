@@ -1,0 +1,224 @@
+.banner {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .banner-content {
+  width: 90%;
+  max-width: 33rem;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.banner .input-todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.banner .banner-content input {
+  outline: none;
+  border: 0;
+  border-radius: 0.3rem;
+  width: 100%;
+  font-size: 0.75rem;
+  padding: 0.9rem 3rem;
+}
+
+.banner .banner-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .banner-header h2 {
+  font-size: 1.7rem;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.banner .banner-header img {
+  height: 22px;
+  width: 22px;
+}
+
+.dark-input {
+  background: #25273c;
+  color: #cacde8;
+}
+
+.light-input {
+  background: white;
+  color: #777a92;
+}
+
+.banner-dark-bg-image {
+  background-image: url("../images/bg-mobile-dark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .banner-dark-bg-image {
+    background-image: url("../images/bg-desktop-dark.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.banner-light-bg-image {
+  background-image: url("../images/bg-mobile-light.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .banner-light-bg-image {
+    background-image: url("../images/bg-desktop-light.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.color-red {
+  color: red;
+}
+
+.body-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+}
+
+.dark-body-bg {
+  background: #161722;
+}
+
+.light-body-bg {
+  background: #fafafa;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  margin-top: -1.7rem;
+  padding: 0;
+  width: 90%;
+  min-height: 2.2rem;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+ul li {
+  width: 100%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 10fr 1fr;
+      grid-template-columns: 2fr 10fr 1fr;
+      grid-template-areas: "checkbox text delete";
+  padding-block: 0.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+ul li .checkbox-list-item {
+  grid-area: check;
+}
+
+ul li .todo-text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: text;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #777a92;
+}
+
+ul li .todo-delete {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: delete;
+  font-size: 1.5rem;
+  color: #777a92;
+}
+
+.line-through {
+  position: relative;
+}
+
+.line-through::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+  height: 2px;
+  background: #777a92;
+  -webkit-animation: 0.3s line-through forwards alternate;
+          animation: 0.3s line-through forwards alternate;
+}
+
+@-webkit-keyframes line-through {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes line-through {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+/*# sourceMappingURL=BodySection.css.map */

@@ -1,0 +1,25 @@
+.todo-checkbox {
+  display: none;
+}
+
+.todo-checkbox + label {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 1px solid #cacde8;
+  background: white;
+  border-radius: 50%;
+}
+
+.todo-checkbox:checked + label {
+  background: url("../../images/icon-check.svg");
+  background-image: url("../../images/icon-check.svg"), linear-gradient(135deg, #57ddff, #c058f3);
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+/*# sourceMappingURL=Checkbox.css.map */

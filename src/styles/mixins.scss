@@ -1,0 +1,11 @@
+@mixin backgroundImage($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin media-query($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
