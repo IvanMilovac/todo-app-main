@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/todo-app-main/static/css/main.6128dc13.chunk.css",
+    "main.css": "/todo-app-main/static/css/main.1c0989c3.chunk.css",
     "main.js": "/todo-app-main/static/js/main.b8c87e3c.chunk.js",
     "main.js.map": "/todo-app-main/static/js/main.b8c87e3c.chunk.js.map",
     "runtime-main.js": "/todo-app-main/static/js/runtime-main.a3784fa2.js",
@@ -8,7 +8,7 @@
     "static/js/2.c321bcd4.chunk.js": "/todo-app-main/static/js/2.c321bcd4.chunk.js",
     "static/js/2.c321bcd4.chunk.js.map": "/todo-app-main/static/js/2.c321bcd4.chunk.js.map",
     "index.html": "/todo-app-main/index.html",
-    "static/css/main.6128dc13.chunk.css.map": "/todo-app-main/static/css/main.6128dc13.chunk.css.map",
+    "static/css/main.1c0989c3.chunk.css.map": "/todo-app-main/static/css/main.1c0989c3.chunk.css.map",
     "static/js/2.c321bcd4.chunk.js.LICENSE.txt": "/todo-app-main/static/js/2.c321bcd4.chunk.js.LICENSE.txt",
     "static/media/BodySection.scss": "/todo-app-main/static/media/bg-desktop-light.3508d620.jpg",
     "static/media/Checkbox.scss": "/todo-app-main/static/media/icon-check.a8fb15d0.svg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.a3784fa2.js",
     "static/js/2.c321bcd4.chunk.js",
-    "static/css/main.6128dc13.chunk.css",
+    "static/css/main.1c0989c3.chunk.css",
     "static/js/main.b8c87e3c.chunk.js"
   ]
 }
